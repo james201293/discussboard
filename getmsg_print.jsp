@@ -25,7 +25,7 @@ response.setDateHeader("Expires", 0);
 
 	      <%
 					//Query String Parameter方法
-					int index = Integer.parseInt(request.getParameter("msgindex"));
+					int index = Integer.parseInt(request.getParameter("subindex"));
 
 					//Payload方法
 				  // 從 request 取出 JSON
@@ -44,11 +44,7 @@ response.setDateHeader("Expires", 0);
 					// 			throw e;
 					// }
 
-        /*取得資料庫連線(固定格式)*/
-            Connection conn = null;
-            PreparedStatement pstmt=null;
-            ResultSet rs = null;
-						String selectmsg = "select * from msglist where subjectID =?";
+
 						%>
 					<head>
 						<link rel=stylesheet type="text/css" href="css/viewmsg.css">
