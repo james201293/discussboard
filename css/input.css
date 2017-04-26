@@ -4,9 +4,7 @@ body{
 table,tr,td{
   border: solid black 1px;
   border-collapse: collapse;
-  text-align: center;
   font-size: 18px;
-  padding: 10px;
 }
 table{
   margin-left:auto;

@@ -50,6 +50,11 @@ response.setDateHeader("Expires", 0);
 				</table>
 			</div>
 
+			<hr>
+
+			<div>
+				<input type="button" value="會員列表" onclick="window.open('members.jsp');">
+			</div>
 
 
 	</div>

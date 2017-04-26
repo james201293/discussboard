@@ -18,3 +18,8 @@ h1{
   color: #b531d6;
   font-size: 45px;
 }
+.btn{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

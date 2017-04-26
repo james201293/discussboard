@@ -4,6 +4,8 @@
 <%@page import="javax.sql.DataSource" %>
 <%@page import="java.sql.Connection" %>
 <%@page import="java.util.*" %>
+<%@page import="java.util.Date" %>
+<%@page import="java.io.*"%>
 <%@page import="java.sql.*" %>
 <%@page import="org.sqlite.*" %>
 <%@page import="org.json.*"%>
@@ -26,7 +28,7 @@ response.setDateHeader("Expires", 0);
 	      <%
 					//Query String Parameter方法
 					int index = Integer.parseInt(request.getParameter("subindex"));
-
+					application.setAttribute("subID",index);
 					//Payload方法
 				  // 從 request 取出 JSON
 					// int index=0;
@@ -45,11 +47,13 @@ response.setDateHeader("Expires", 0);
 					// }
 
 
-						%>
+					%>
 					<head>
 						<link rel=stylesheet type="text/css" href="css/viewmsg.css">
 					</head>
 					<body>
+						<h1>討論列表</h1>
+						<hr>
 						<table>
 										<thead>
 												<tr>
@@ -98,4 +102,9 @@ response.setDateHeader("Expires", 0);
 										%>
 									 </tbody>
 						</table>
+						<br>
+						<div class="btn">
+							<input type="button" value="回首頁" onclick="window.open('index.jsp')">
+							<input type="button" value="我要留言" onclick="window.open('input.jsp')">
+						</div>
 					</body>
