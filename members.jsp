@@ -25,7 +25,7 @@ response.setDateHeader("Expires", 0);
 
 
 					<head>
-						<link rel=stylesheet type="text/css" href="css/viewmsg.css">
+						<link rel=stylesheet type="text/css" href="css/index.css">
 							<title>MemberList</title>
 					</head>
 					<body>

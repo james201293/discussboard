@@ -58,24 +58,13 @@ response.setDateHeader("Expires", 0);
 						<title>List</title>
 					</head>
 					<body>
-						<h1>討論列表</h1>
 						<hr>
 						<table>
-										<thead>
-												<tr>
-														<th>留言ID</th>
-														<th>使用者</th>
-														<th>留言</th>
-														<th>留言時間</th>
-														<th>主題ID</th>
-														<th>刪除</th>
-												</tr>
-										</thead>
 									 <tbody>
 								<%
 								/*取得資料庫連線(固定格式)*/
 										Connection conn = null;
-										PreparedStatement pstmt=null;
+										PreparedStatement pstmt = null;
 										ResultSet rs = null;
 										String selectmsg = "select * from msglist where subjectID =?";
 
@@ -84,16 +73,28 @@ response.setDateHeader("Expires", 0);
 												pstmt=conn.prepareStatement(selectmsg);
 												pstmt.setInt(1, index);
 												rs=pstmt.executeQuery();
+												int count = 1 ;
 
 												while (rs.next()) {
+
 														out.println("<tr>");
-														out.println("<td>" + rs.getString("articleID") + "</td>");
-														out.println("<td>" + rs.getString("username") + "</td>");
-														out.println("<td>" + rs.getString("message") + " </td>");
-														out.println("<td>" + rs.getString("time") + "</td>");
-														out.println("<td>" + rs.getString("subjectID") + "</td>");
-														out.println("<td>"+"<input type='button' class='msg_delbtn' value='刪除' msgid='"+rs.getString("articleID")+"'></td>");
+															//out.println("<td class='msg_title'>樓數count");
+															out.println("<td class='msg_title'>" + count + "</td>");
+															//out.println("<td class='msg_title'>使用者</td>");
+															out.println("<td id='user'>" + rs.getString("username") + " </td>");
+															//out.println("<td class='msg_title'>主題名稱</td>");
+															//out.println("<td class='msg_title'>" + rs.getString("subjectID") + "</td>");
+															//out.println("<td class='time'>發表時間</td>");
+															out.println("<td colspan='7'>" + rs.getString("message") + "</td>");
+															out.println("<td class='time'>" + rs.getString("time") + "</td>");
+														//out.println("</tr>");
+														//out.println("<tr>");
+															//out.println("<th class='msg_title'>留言內容</th>");
+
+															//out.println("<td>"+"<input type='button' class='msg_delbtn' value='刪除' msgid='"+rs.getString("articleID")+"'></td>");
+
 														out.println("</tr>");
+														count++;
 												}
 
 												rs.close();

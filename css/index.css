@@ -1,7 +1,7 @@
 body{
   background-color: #FFEE99
 }
-table,tr,td{
+table,th,tr,td{
   border: solid black 1px;
   border-collapse: collapse;
   text-align: center;
@@ -15,13 +15,13 @@ table{
 }
 h1{
   text-align: center;
-  color: #7131d9;
-  font-size: 45;
+  font-weight: 900;
+  color: #ee4848;
+  font-size: 45px;
 }
-#sendID{
-  height: 3em;
-  width: 6em;
-  border-radius: 15px;
-  background-color: #77dada;
-  border: 0px;
+
+.btn{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }

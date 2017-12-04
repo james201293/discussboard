@@ -23,12 +23,12 @@ response.setDateHeader("Expires", 0);
 <head>
 		<link rel=stylesheet type="text/css" href="css/input.css">
 		<script src="js/jquery.js"></script>
-		<script src="js/input.js"></script>
+		<script src="js/input_newsub.js"></script>
 
-		<title>input</title>
+		<title>input_newsub</title>
 </head>
 <body>
-	<h1>發表留言</h1>
+	<h1>發表新主題</h1>
 	<hr>
 		<div>
 			<table id="form" width="40%" cellspacing="1" cellpadding="3">
@@ -37,12 +37,8 @@ response.setDateHeader("Expires", 0);
 							<td width="80%"><input type="text" id="user"></td>
 					</tr>
 					<tr>
-							<td width="20%">主題ID:</td>
-							<td><input type="text" id="subID" size="3" value="<%=application.getAttribute("subID")%>" disabled></td>	<!--取得主題ID-->
-					</tr>
-					<tr>
-							<td width="20%">留言內容：</td>
-							<td width="80%"><textarea id="content" cols="45" rows="7"></textarea>
+							<td width="20%">主題名稱：</td>
+							<td width="80%"><textarea id="subname" cols="45" rows="7"></textarea>
 							</td>
 					</tr>
 					<tr>
@@ -58,7 +54,7 @@ response.setDateHeader("Expires", 0);
 			<hr>
 
 			<div>
-				<input type="button" value="回首頁" onclick="window.open('index.jsp');">
+				<input type="button" value="回首頁" onclick="window.open('index.jsp')">
 			</div>
 
 

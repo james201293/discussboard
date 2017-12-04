@@ -1,7 +1,7 @@
 body{
   background-color: #FFEE99;
 }
-table,tr,td{
+table,tr,td,th{
   border: solid black 1px;
   border-collapse: collapse;
   text-align: center;
@@ -15,7 +15,8 @@ table{
 }
 h1{
   text-align: center;
-  color: #b531d6;
+  font-weight: 900;
+  color: #e456c5;
   font-size: 45px;
 }
 .btn{

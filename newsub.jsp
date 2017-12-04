@@ -32,28 +32,26 @@ response.setDateHeader("Expires", 0);
 
 <%
 				String user1=request.getParameter("user");
-        String content1=request.getParameter("content");
-        String subID1=request.getParameter("subID");
+        String subname1=request.getParameter("subname");
         /*取得資料庫連線(固定格式)*/
             Connection conn = null;
             PreparedStatement pstmt=null;
-            String sql="insert into msglist (username,message,subjectID,time) values (?,?,?,?)";  //傳入使用者輸入的變數
+            String sql="insert into subjectlist (subject,founder,time) values (?,?,?)";  //傳入使用者輸入的變數
 
             try{
                 conn=getConnection();
 
                 pstmt=conn.prepareStatement(sql);
-								pstmt.setString(1, user1);
-								pstmt.setString(2, content1);
-								pstmt.setString(3, subID1);
-								pstmt.setString(4, temp);
+								pstmt.setString(1, subname1);
+								pstmt.setString(2, user1);
+								pstmt.setString(3, temp);
 
                 pstmt.executeUpdate(); //執行
 
                 pstmt.close();
 
 								JSONObject json = new JSONObject();
-				  				json.put("exe_status", "新增留言成功");
+				  				json.put("exe_status", "新增主題成功");
 									out.print(json);
 
             }
