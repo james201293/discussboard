@@ -31,7 +31,7 @@ response.setDateHeader("Expires", 0);
 		<title>discussboard</title>
 </head>
 <body>
-	<h1>主題列表</h1>
+	<h1>PTT like 討論板</h1>
 	<hr>
 	<div ng-app="myApp">
 			<div ng-controller="subjectCtrl">

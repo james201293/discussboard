@@ -1,8 +1,9 @@
 body{
-  background-color: #FFEE99;
+  background-color: black;
+  color: white;
 }
 table,tr,td,th{
-  border: solid black 1px;
+  <!--border: solid black 1px;-->
   border-collapse: collapse;
   text-align: center;
   font-size: 18px;
@@ -11,16 +12,33 @@ table,tr,td,th{
 table{
   margin-left:auto;
   margin-right:auto;
-  background-color: #21d6d1;
+}
+tbody tr {
+    background-color:black;
+}
+tbody tr:nth-child(odd) {
+    background-color:black;
 }
 h1{
   text-align: center;
   font-weight: 900;
-  color: #e456c5;
+  color: white;
   font-size: 45px;
 }
 .btn{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+.content{
+  color: #e0d952;
+}
+#user{
+  color: yellow;
+}
+.time{
+  color: #3aab52;
+}
+.msg_title{
+  color: #bfbec2;
 }

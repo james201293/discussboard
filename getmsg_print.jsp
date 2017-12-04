@@ -58,7 +58,7 @@ response.setDateHeader("Expires", 0);
 						<title>List</title>
 					</head>
 					<body>
-						<h1>討論列表</h1>
+						<h1>主題留言</h1>
 						<hr>
 						<table>
 										<thead>
@@ -75,7 +75,7 @@ response.setDateHeader("Expires", 0);
 								<%
 								/*取得資料庫連線(固定格式)*/
 										Connection conn = null;
-										PreparedStatement pstmt=null;
+										PreparedStatement pstmt = null;
 										ResultSet rs = null;
 										String selectmsg = "select * from msglist where subjectID =?";
 

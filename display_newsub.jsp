@@ -25,8 +25,6 @@ response.setDateHeader("Expires", 0);
 
 <head>
   <link rel=stylesheet type="text/css" href="css/d_newsub.css">
-  <script src="js/jquery.js"></script>
-  <script src="js/getmsg_print.js"></script>
   <title>List</title>
 </head>
 <body>
